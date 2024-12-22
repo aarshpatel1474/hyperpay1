@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyperpay/hyperpay.dart';
+import 'package:hyperpay/rack_inspection.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: const HyperPay(),
+      home: const RackInspection(),
     );
   }
 }
