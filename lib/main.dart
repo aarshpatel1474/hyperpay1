@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hyperpay/hyperpay.dart';
-import 'package:hyperpay/rack_inspection.dart';
+import 'package:get/get.dart';
+import 'package:hyperpay/controller/binding_controller.dart';
+import 'package:hyperpay/pages/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,10 +13,13 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      home: const RackInspection(),
+      initialBinding: BindingController(),
+      theme: ThemeData(
+        fontFamily: "Poppins"
+      ),
+      home: const Home(),
     );
   }
 }

@@ -149,10 +149,14 @@ class _HyperPayState extends State<HyperPay> {
      log(paymentResultData.paymentResult.toString(), name: "PAYMENT_RESULT");
 
      if(paymentResultData.paymentResult == PaymentResult.success){
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("${paymentResultData.paymentResult}")));
+       if(mounted){
+         ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("${paymentResultData.paymentResult}")));
+       }
       _isLoading(false);
      }else if(paymentResultData.paymentResult == PaymentResult.error){
-       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("${paymentResultData.paymentResult}")));
+       if(mounted){
+         ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("${paymentResultData.paymentResult}")));
+       }
        _isLoading(false);
      }else if(paymentResultData.paymentResult == PaymentResult.noResult) {
        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("${paymentResultData.paymentResult}")));
