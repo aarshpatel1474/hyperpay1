@@ -121,7 +121,7 @@ class _WidgetCarouselSliderState extends State<WidgetCarouselSlider> {
           bottom: 10.0,
           right: 20.0,
           child: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
             decoration: BoxDecoration(
               color: Colors.black38,
               borderRadius: BorderRadius.circular(16.0),
